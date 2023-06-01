@@ -1,0 +1,7 @@
+{
+  "chatbot": [
+    { "id": 1, "request": "hello", "response": "Hello! How can I assist you?" },
+    { "id": 2, "request": "help", "response": "Sure, I'm here to help!" },
+    { "id": 3, "request": "bye", "response": "Goodbye! Have a great day!" }
+  ]
+}

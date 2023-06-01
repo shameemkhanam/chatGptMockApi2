@@ -1,0 +1,39 @@
+<!-- <div class="chat-container">
+  <div *ngFor="let message of messages" class="message">
+    <div [ngClass]="{'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot'}">
+      {{ message.content }}
+    </div>
+  </div>
+</div>
+
+<div class="input-container">
+  <input type="text" [(ngModel)]="newMessage" placeholder="Type your message" />
+  <button (click)="sendMessage()">Send</button>
+</div> -->
+
+<div class="container text-center">
+  <img src="../../assets/chatbot.png" alt="" >
+</div>
+<div class="container d-flex justify-content-center">
+  <div class="chat-container">
+      
+      <div class="chat-body">            
+          <div *ngFor="let message of chatMessages" class="message"
+          [ngClass]="message.sender === 'user' ? 'sent' : 'received'">
+              
+              <p><img *ngIf="message.sender === 'chatbot'" src="../../assets/chatbot2.jpg" class="rounded-circle me-2" width="40" alt="">
+                  <img *ngIf="message.sender === 'user'" src="../../assets/user.png" class="rounded-circle me-2" width="30" alt=""> 
+                  {{ message.text }}
+              </p>
+          </div>
+      </div>
+  
+      <div class="chat-footer d-flex justify-content-between mt-2">
+          <input class="form-control w-100" type="text" [(ngModel)]="userInput" name="userMessage" placeholder="Enter your message" >
+          <button class="ms-2 btn btn-primary" type="submit" (click)="sendMessage()" ><i class="fa fa-paper-plane"></i></button>
+      </div>
+      
+  </div>
+</div>
+  
+  
